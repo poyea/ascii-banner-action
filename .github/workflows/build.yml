@@ -13,6 +13,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
+    - uses: actions/setup-node@v2
+      with:
+        node-version: '16'
     - name: Install
       run: npm ci
     - name: Lint
@@ -24,7 +27,14 @@ jobs:
   test-action:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@master
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+      - name: Install
+        run: npm ci
+      - name: Build
+        run: npm run build
       - uses: ./
         with:
           word: FINISH

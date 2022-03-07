@@ -1,8 +1,8 @@
-# <p align="center">[TypeScript Package Boilerplate](https://github.com/poyea/typescript-package-boilerplate/)
+# <p align="center">[ASCII Banner Actions](https://github.com/poyea/ascii-banner-actions/)
 
 <div align="center">
-  <a href="https://github.com/poyea/typescript-package-boilerplate/actions/workflows/build.yml">
-    <img alt="Build" src="https://github.com/poyea/typescript-package-boilerplate/actions/workflows/build.yml/badge.svg">
+  <a href="https://github.com/poyea/ascii-banner-actions/actions/workflows/build.yml">
+    <img alt="Build" src="https://github.com/poyea/ascii-banner-actions/actions/workflows/build.yml/badge.svg">
   </a>
 </div>
 
