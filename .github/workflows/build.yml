@@ -35,14 +35,17 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
-      - uses: ./
+      - name: FINISH
+        uses: ./
         with:
           word: FINISH
-      - uses: ./
+      - name: FINISH with Doom
+        uses: ./
         with:
           word: FINISH
           style: DOOM
-      - uses: ./
+      - name: FINISH with Rusted
+        uses: ./
         with:
           word: FINISH
           style: Rusted
