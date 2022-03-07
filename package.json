@@ -1,8 +1,8 @@
 {
-  "name": "ts-package-boilerplate",
-  "version": "2.0.0",
-  "description": "A minimist boilerplate for Typescript packages.",
-  "homepage": "https://github.com/poyea/ts-package-boilerplate#readme",
+  "name": "ascii-banner-actions",
+  "version": "1.0.0",
+  "description": "A GitHub Actions for printing an ASCII banner.",
+  "homepage": "https://github.com/poyea/ascii-banner-actions#readme",
   "author": "John Law <poyea@pm.me> (https://github.com/poyea/)",
   "main": "dist/src/index.js",
   "types": "dist/src/index.d.ts",
@@ -11,13 +11,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/poyea/ts-package-boilerplate.git"
+    "url": "git+https://github.com/poyea/ascii-banner-actions.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/poyea/ts-package-boilerplate/issues"
+    "url": "https://github.com/poyea/ascii-banner-actions/issues"
   },
   "scripts": {
+    "prepare": "husky install",
     "start": "nodemon --watch 'src/**/*.ts' --exec ts-node src/index.ts",
     "build": "tsc",
     "version": "npm run lint && git add -A src && git push && git push --tags",
@@ -54,5 +55,9 @@
     "package",
     "ts",
     "typescript"
-  ]
+  ],
+  "dependencies": {
+    "@actions/core": "^1.6.0",
+    "@actions/github": "^5.0.0"
+  }
 }
