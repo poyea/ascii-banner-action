@@ -1,0 +1,16 @@
+name: ASCII Banner
+description: Print an ASCII banner in your GitHub Actions.
+inputs:
+  word:
+    description: Word to convert as an ASCII banner
+    required: true
+    default: 'DONE'
+  style:
+    description: A supported ASCII style
+    required: false
+outputs:
+  banner:
+    description: The banner
+runs:
+  using: node16
+  main: dist/index.js
