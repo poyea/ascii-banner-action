@@ -4,19 +4,25 @@ import art from "ascii-art";
 import * as core from "@actions/core";
 
 const convert = async (word: string, style: string | undefined) => {
+  style = style?.toLowerCase();
+  const artFont = (style: string) => {
+    // Sadly it only works properly this way
+    art.font(word, style, (err: undefined, rendered: string) => {
+      if (!err) {
+        core.setOutput("banner", rendered);
+        core.info(rendered);
+        core.debug(`Done printing ${word} in ASCII.`);
+      }
+    });
+  };
   switch (style) {
+    case "rusted":
+      artFont("rusted");
+      break;
     case "doom":
     default:
-    {
-      // Sadly it only works properly this way
-      art.font(word, "Doom", (err: undefined, rendered: string) => {
-        if (!err) {
-          core.setOutput("banner", rendered);
-          core.info(rendered);
-          core.debug(`Done printing ${word} in ASCII.`);
-        }
-      });
-    }
+      artFont("Doom");
+      break;
   }
 };
 

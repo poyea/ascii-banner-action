@@ -41,5 +41,9 @@ jobs:
       - uses: ./
         with:
           word: FINISH
-          style: doom
+          style: DOOM
+      - uses: ./
+        with:
+          word: FINISH
+          style: Rusted
 
