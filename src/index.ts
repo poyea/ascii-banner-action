@@ -9,6 +9,7 @@ async function run (): Promise<void> {
 
     const banner = await convert(word, style);
     core.setOutput("banner", banner);
+    core.info(banner);
     core.debug(`Done printing ${word} in ASCII.`);
   } catch (error) {
     if (error instanceof Error) core.setFailed(error.message);
