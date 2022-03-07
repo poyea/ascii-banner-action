@@ -38,3 +38,8 @@ jobs:
       - uses: ./
         with:
           word: FINISH
+      - uses: ./
+        with:
+          word: FINISH
+          style: doom
+
