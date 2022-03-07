@@ -1,0 +1,58 @@
+{
+  "name": "ts-package-boilerplate",
+  "version": "2.0.0",
+  "description": "A minimist boilerplate for Typescript packages.",
+  "homepage": "https://github.com/poyea/ts-package-boilerplate#readme",
+  "author": "John Law <poyea@pm.me> (https://github.com/poyea/)",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "files": [
+    "dist/**/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/poyea/ts-package-boilerplate.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/poyea/ts-package-boilerplate/issues"
+  },
+  "scripts": {
+    "start": "nodemon --watch 'src/**/*.ts' --exec ts-node src/index.ts",
+    "build": "tsc",
+    "version": "npm run lint && git add -A src && git push && git push --tags",
+    "test": "mocha -r ts-node/register test/**/*.test.ts",
+    "test-cov": "nyc --reporter=text npm run test",
+    "test-cov:html": "nyc --reporter=text --reporter=html npm run test",
+    "lint": "eslint . -c .eslintrc.json --ext .ts",
+    "fmt": "eslint . --fix -c .eslintrc.json --ext .ts"
+  },
+  "devDependencies": {
+    "@types/chai": "latest",
+    "@types/mocha": "latest",
+    "@types/node": "latest",
+    "@typescript-eslint/eslint-plugin": "^5.10.1",
+    "@typescript-eslint/parser": "^5.10.1",
+    "chai": "latest",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.2.0",
+    "husky": "^7.0.4",
+    "mocha": "latest",
+    "nodemon": "latest",
+    "nyc": "latest",
+    "ts-node": "latest",
+    "typescript": "^4.5.5"
+  },
+  "directories": {
+    "example": "examples",
+    "test": "test"
+  },
+  "keywords": [
+    "package",
+    "ts",
+    "typescript"
+  ]
+}
