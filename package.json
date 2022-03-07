@@ -1,8 +1,8 @@
 {
-  "name": "ascii-banner-actions",
+  "name": "ascii-banner-action",
   "version": "1.0.0",
   "description": "A GitHub Actions for printing an ASCII banner.",
-  "homepage": "https://github.com/poyea/ascii-banner-actions#readme",
+  "homepage": "https://github.com/poyea/ascii-banner-action#readme",
   "author": "John Law <poyea@pm.me> (https://github.com/poyea/)",
   "main": "dist/src/index.js",
   "types": "dist/src/index.d.ts",
@@ -11,11 +11,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/poyea/ascii-banner-actions.git"
+    "url": "git+https://github.com/poyea/ascii-banner-action.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/poyea/ascii-banner-actions/issues"
+    "url": "https://github.com/poyea/ascii-banner-action/issues"
   },
   "scripts": {
     "prepare": "husky install",
