@@ -7,10 +7,7 @@
 </div>
 
 ## To use
-Press the Green `Use this template` button on this respository page.
-
-## Equivalent setting
-typescript + (ts-node + nodemon + ts-node) + (mocha + chai + nyc) + (eslint) + husky
+Add to your workflow.
 
 ## If you like this, please
 * Star
