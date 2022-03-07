@@ -7,12 +7,12 @@ const convert = async (word: string, style: string | undefined) => {
     switch (style) {
       case "doom":
       {
-        const rendered = await art.font(word, style).completed();
+        const rendered = await art.font(word, "Doom").completed();
         return rendered;
       }
       default:
       {
-        const rendered = await art.font(word, "doom").completed();
+        const rendered = await art.font(word, "Doom").completed();
         return rendered;
       }
     }

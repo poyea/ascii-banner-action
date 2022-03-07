@@ -4,7 +4,7 @@ import convert from "./convert";
 async function run (): Promise<void> {
   try {
     const word: string = core.getInput("word");
-    const style: string = core.getInput("style");
+    const style: string = core.getInput("style").toLowerCase();
     core.debug(`Printing ${word} in ASCII...`);
 
     const banner = await convert(word, style);
