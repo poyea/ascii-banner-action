@@ -15,4 +15,4 @@ Add to your workflow.
 * Contribute
 
 ## License
-This repository is licensed under MIT License. See also [LICENSE.md](LICENSE.md) for details.
+This repository is licensed under MIT License. See also [LICENSE](LICENSE) for details.
