@@ -3,7 +3,7 @@ description: Print an ASCII banner in your GitHub Actions.
 inputs:
   word:
     description: Word to convert as an ASCII banner
-    required: true
+    required: false
     default: 'DONE'
   style:
     description: A supported ASCII style
