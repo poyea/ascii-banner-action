@@ -11,7 +11,7 @@ class Content {
     }
 
     checkStyle () {
-      if (this.style === "doom") {
+      if (this.style === "doom" || this.style === undefined) {
         this.style = "Doom";
       }
     }
@@ -21,6 +21,7 @@ class Content {
         case "rusted":
           artFont(this);
           break;
+        case "Doom":
         case "doom":
         default:
           artFont(this);

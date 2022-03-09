@@ -7,7 +7,7 @@ async function run (): Promise<void> {
     const style: string = core.getInput("style");
     core.debug(`Printing ${word} in ASCII...`);
     const content = new Content(word, style);
-    content.convert();
+    await content.convert();
   } catch (error) {
     if (error instanceof Error) core.setFailed(error.message);
   }
