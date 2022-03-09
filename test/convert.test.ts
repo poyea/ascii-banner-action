@@ -1,19 +1,22 @@
 import { expect } from "chai";
-import convert from "../src/convert";
+import Content from "../src/models/Content";
 
 describe("Converting strings", () => {
   it("should return another string with doom", () => {
-    const stringWithStyle = () => convert("Done", "doom");
+    const content = new Content("Done", "doom");
+    const stringWithStyle = () => content.convert();
     expect(stringWithStyle).not.to.throw();
   });
 
   it("should return another string with rusted", () => {
-    const stringWithStyle = () => convert("Done", "Rusted");
+    const content = new Content("Done", "Rusted");
+    const stringWithStyle = () => content.convert();
     expect(stringWithStyle).not.to.throw();
   });
 
   it("should return another string without style", () => {
-    const stringNoStyle = () => convert("Done", undefined);
+    const content = new Content("Done", undefined);
+    const stringNoStyle = () => content.convert();
     expect(stringNoStyle).not.to.throw();
   });
 });
