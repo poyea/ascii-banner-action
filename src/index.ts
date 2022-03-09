@@ -1,13 +1,13 @@
 import * as core from "@actions/core";
-import convert from "./convert";
+import Content from "./models/Content";
 
 async function run (): Promise<void> {
   try {
     const word: string = core.getInput("word");
-    const style: string = core.getInput("style").toLowerCase();
+    const style: string = core.getInput("style");
     core.debug(`Printing ${word} in ASCII...`);
-
-    convert(word, style);
+    const content = new Content(word, style);
+    content.convert();
   } catch (error) {
     if (error instanceof Error) core.setFailed(error.message);
   }
