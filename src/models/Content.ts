@@ -7,6 +7,13 @@ class Content {
     constructor (word: string, style: string | undefined) {
       this.word = word.toLowerCase();
       this.style = style?.toLowerCase();
+      this.checkStyle();
+    }
+
+    checkStyle () {
+      if (this.style === "doom") {
+        this.style = "Doom";
+      }
     }
 
     async convert () {
