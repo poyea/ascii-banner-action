@@ -13,7 +13,7 @@ describe("Converting strings", () => {
     const stringWithStyle = () => content.convert();
     expect(stringWithStyle).not.to.throw();
   });
-  
+
   it("should return another string without style", () => {
     const content = new Content("Done", undefined);
     const stringNoStyle = () => content.convert();
