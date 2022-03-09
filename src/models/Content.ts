@@ -1,17 +1,18 @@
 import { artFont } from "../styles/art";
+import { plainFont } from "../styles/plain";
 
 class Content {
     word: string;
     style: string | undefined;
 
     constructor (word: string, style: string | undefined) {
-      this.word = word.toLowerCase();
-      this.style = style?.toLowerCase();
+      this.word = word;
+      if (style !== undefined) { this.style = style.toLowerCase(); }
       this.checkStyle();
     }
 
     checkStyle () {
-      if (this.style === "doom" || this.style === undefined) {
+      if (this.style === "doom") {
         this.style = "Doom";
       }
     }
@@ -23,8 +24,10 @@ class Content {
           break;
         case "Doom":
         case "doom":
-        default:
           artFont(this);
+          break;
+        default:
+          plainFont(this);
           break;
       }
     }
